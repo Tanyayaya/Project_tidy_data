@@ -12,9 +12,9 @@ subject_test.txt:Ssubject who performed the activity for each window sample. Its
 features.txt: names for all the measurements.  
 
 ## Variables
-train_data:includes the subjects,labels and measurements of training data
-test_data:includes the subjects,labels and measurements of test data
-data:includes both training data and test data
+train_data:includes the subjects,labels and measurements of training data.
+test_data:includes the subjects,labels and measurements of test data.
+data: includes both training data and test data.
 data_good:includes the subjects,labels,averages and standard deviations for each measurements in test and training.
 data_tidy:includes the averages of each variable for each activity and each subject in test and training.
 
