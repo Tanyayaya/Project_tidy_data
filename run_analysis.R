@@ -35,3 +35,6 @@ colnames(data_good)<-c("subject","activity",feature[mean_std-2])
 #Creates an independent tidy data set with the average of each variable for each activity and each subject
 data_tidy<-melt(data_good,id=c("subject","activity"))
 data_tidy<-cast(data_tidy,subject+activity~variable,mean)
+#load "data_tidy" into a .txt file 
+file.create("tidy_data.txt")
+write.table(data_tidy,file,row.names = F)
