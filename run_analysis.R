@@ -15,7 +15,7 @@ data<-rbind(test_data,train_data)
 feature<-read.table("UCI HAR Dataset/features.txt")
 feature<-apply(feature,1,"[",2)
 library(stringr)
-mean_std<-which(grepl("std()|mean()",feature))+2
+mean_std<-which(grepl("std()|mean()|angle()",feature))+2
 data_good<-data[,c(1,2,as.numeric(mean_std)),with=F]
 data_good$label<-as.character(data_good$label)%>%
   str_replace_all("1","walking")%>%
